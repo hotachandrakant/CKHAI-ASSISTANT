@@ -1,0 +1,861 @@
+[33mWARNING[0m:  [07-06-2026 12:13:42] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [07-06-2026 12:13:43] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [07-06-2026 12:13:43] Starting component System
+[36mDEBUG[0m:    [07-06-2026 12:13:43] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [07-06-2026 12:13:43] Starting component SqliteDB
+[36mDEBUG[0m:    [07-06-2026 12:13:43] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [07-06-2026 12:13:43] Starting component Posthog
+[36mDEBUG[0m:    [07-06-2026 12:13:43] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [07-06-2026 12:13:43] Starting component SegmentAPI
+[31mERROR[0m:    [07-06-2026 12:13:43] Failed to send telemetry event ServerStartEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:13:43] Started server process [[36m6884[0m]
+[32mINFO[0m:     [07-06-2026 12:13:43] Waiting for application startup.
+[32mINFO[0m:     [07-06-2026 12:13:43] Application startup complete.
+[32mINFO[0m:     [07-06-2026 12:13:43] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [07-06-2026 12:13:59] ::1:51566 - "GET / HTTP/1.1" 404
+[32mINFO[0m:     [07-06-2026 12:13:59] ::1:51566 - "GET /favicon.ico HTTP/1.1" 404
+[32mINFO[0m:     [07-06-2026 12:17:05] ::1:51587 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:17:05] ::1:51587 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[31mERROR[0m:    [07-06-2026 12:17:05] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:17:05] ::1:51588 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:39:03] ::1:51800 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:39:03] ::1:51800 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:39:03] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:39:03] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:39:03] ::1:51801 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:39:04] ::1:51801 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:39:04] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [07-06-2026 12:39:04] ::1:51801 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/upsert HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:40:12] ::1:51827 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:40:12] ::1:51827 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:40:12] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:40:12] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:40:12] ::1:51828 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[31mERROR[0m:    [07-06-2026 12:40:12] Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+[33mWARNING[0m:  [07-06-2026 12:40:12] Number of requested results 10 is greater than number of elements in index 4, updating n_results = 4
+[32mINFO[0m:     [07-06-2026 12:40:12] ::1:51828 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:41:53] ::1:51887 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:41:53] ::1:51887 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:41:53] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:41:53] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:41:53] ::1:51888 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [07-06-2026 12:41:53] Number of requested results 10 is greater than number of elements in index 4, updating n_results = 4
+[32mINFO[0m:     [07-06-2026 12:41:53] ::1:51888 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:42:27] ::1:51905 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:42:27] ::1:51905 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:42:27] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:42:27] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:42:27] ::1:51906 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [07-06-2026 12:42:27] Number of requested results 10 is greater than number of elements in index 4, updating n_results = 4
+[32mINFO[0m:     [07-06-2026 12:42:27] ::1:51906 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:43:19] ::1:51936 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:43:19] ::1:51936 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:43:19] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:43:19] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:43:19] ::1:51937 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [07-06-2026 12:43:19] Number of requested results 10 is greater than number of elements in index 4, updating n_results = 4
+[32mINFO[0m:     [07-06-2026 12:43:19] ::1:51937 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:50:37] ::1:52005 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:50:37] ::1:52005 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:50:37] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:50:37] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:50:37] ::1:52006 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [07-06-2026 12:50:37] Number of requested results 10 is greater than number of elements in index 4, updating n_results = 4
+[32mINFO[0m:     [07-06-2026 12:50:37] ::1:52006 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:50:50] ::1:52032 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:50:50] ::1:52032 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:50:50] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:50:50] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:50:50] ::1:52033 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:50:57] ::1:52033 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:50:57] ::1:52033 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/upsert HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:11] ::1:52870 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:11] ::1:52870 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:51:11] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:51:11] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:51:11] ::1:52871 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:11] ::1:52871 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:32] ::1:52885 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:32] ::1:52885 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:51:32] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:51:32] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:51:32] ::1:52886 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:32] ::1:52886 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:55] ::1:52901 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:55] ::1:52901 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:51:55] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:51:55] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:51:55] ::1:52902 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:51:55] ::1:52902 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:54:32] ::1:52968 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:54:32] ::1:52968 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:54:32] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:54:32] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:54:32] ::1:52969 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:54:32] ::1:52969 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:54:55] ::1:52987 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:54:55] ::1:52987 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:54:55] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:54:55] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:54:55] ::1:52988 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:54:55] ::1:52988 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:59:25] ::1:53052 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:59:25] ::1:53052 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:59:25] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:59:25] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:59:25] ::1:53053 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:59:32] ::1:53053 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:59:32] ::1:53053 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/upsert HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:59:50] ::1:53891 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:59:50] ::1:53891 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 12:59:50] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 12:59:50] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 12:59:50] ::1:53892 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 12:59:50] ::1:53892 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:00:14] ::1:53907 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:00:14] ::1:53907 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:00:14] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:00:14] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:00:14] ::1:53908 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:00:14] ::1:53908 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:03:00] ::1:53963 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:03:00] ::1:53963 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:03:00] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:03:00] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:03:00] ::1:53964 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:03:00] ::1:53964 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:00] ::1:54252 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:00] ::1:54252 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:24:00] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:24:00] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:24:00] ::1:54253 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:01] ::1:54253 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:14] ::1:54276 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:14] ::1:54276 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:24:14] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:24:14] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:24:14] ::1:54277 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:21] ::1:54277 - "GET /api/v1/pre-flight-checks HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:21] ::1:54277 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/upsert HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:28] ::1:55125 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:28] ::1:55125 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:24:28] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:24:28] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:24:28] ::1:55126 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:24:28] ::1:55126 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:27:04] ::1:55163 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:27:04] ::1:55163 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:27:04] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:27:04] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:27:04] ::1:55164 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:27:04] ::1:55164 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:33:04] ::1:55257 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:33:04] ::1:55257 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:33:04] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:33:04] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:33:04] ::1:55258 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:33:04] ::1:55258 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[33mWARNING[0m:  [07-06-2026 13:36:07] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [07-06-2026 13:36:07] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [07-06-2026 13:36:07] Starting component System
+[36mDEBUG[0m:    [07-06-2026 13:36:07] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [07-06-2026 13:36:07] Starting component SqliteDB
+[36mDEBUG[0m:    [07-06-2026 13:36:07] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [07-06-2026 13:36:07] Starting component Posthog
+[36mDEBUG[0m:    [07-06-2026 13:36:07] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [07-06-2026 13:36:07] Starting component SegmentAPI
+[31mERROR[0m:    [07-06-2026 13:36:07] Failed to send telemetry event ServerStartEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:36:07] Started server process [[36m12145[0m]
+[32mINFO[0m:     [07-06-2026 13:36:07] Waiting for application startup.
+[32mINFO[0m:     [07-06-2026 13:36:07] Application startup complete.
+[32mINFO[0m:     [07-06-2026 13:36:07] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [07-06-2026 13:36:44] ::1:55288 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:36:44] ::1:55288 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:36:44] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:36:44] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:36:44] ::1:55289 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[31mERROR[0m:    [07-06-2026 13:36:44] Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+[36mDEBUG[0m:    [07-06-2026 13:36:44] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [07-06-2026 13:36:44] ::1:55289 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:41:22] ::1:55363 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:41:22] ::1:55363 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:41:22] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:41:22] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:41:22] ::1:55364 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:41:22] ::1:55364 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:51:26] ::1:55456 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:51:26] ::1:55456 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:51:26] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:51:26] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:51:26] ::1:55457 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:51:26] ::1:55457 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:52:05] ::1:55476 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:52:05] ::1:55476 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:52:05] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:52:05] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:52:05] ::1:55477 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:52:05] ::1:55477 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:54:28] ::1:55515 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:54:28] ::1:55515 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:54:28] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:54:28] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:54:28] ::1:55516 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:54:28] ::1:55516 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:56:28] ::1:55546 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:56:28] ::1:55546 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:56:28] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:56:28] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:56:28] ::1:55547 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:56:28] ::1:55547 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:59:26] ::1:55601 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:59:26] ::1:55601 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 13:59:26] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 13:59:26] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 13:59:26] ::1:55602 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 13:59:26] ::1:55602 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:01:40] ::1:55626 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:01:40] ::1:55626 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:01:40] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:01:40] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:01:40] ::1:55627 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:01:40] ::1:55627 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:03:47] ::1:55687 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:03:47] ::1:55687 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:03:47] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:03:47] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:03:47] ::1:55688 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:03:47] ::1:55688 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:05:09] ::1:55720 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:05:09] ::1:55720 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:05:10] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:05:10] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:05:10] ::1:55721 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:05:10] ::1:55721 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:06:09] ::1:55736 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:06:09] ::1:55736 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:06:09] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:06:09] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:06:09] ::1:55737 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:06:09] ::1:55737 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:06:26] ::1:55752 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:06:26] ::1:55752 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:06:26] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:06:26] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:06:26] ::1:55753 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:06:26] ::1:55753 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:09:40] ::1:55817 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:09:40] ::1:55817 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:09:40] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:09:40] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:09:40] ::1:55818 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:09:40] ::1:55818 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:10:08] ::1:55844 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:10:08] ::1:55844 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:10:08] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:10:08] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:10:08] ::1:55845 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:10:08] ::1:55845 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:12:27] ::1:55885 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:12:27] ::1:55885 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:12:27] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:12:27] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:12:27] ::1:55886 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:12:27] ::1:55886 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:12:35] ::1:55910 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:12:35] ::1:55910 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:12:35] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:12:35] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:12:35] ::1:55911 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:12:35] ::1:55911 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:13:08] ::1:55939 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:13:08] ::1:55939 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:13:08] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:13:08] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:13:08] ::1:55940 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:13:08] ::1:55940 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:13:12] ::1:55954 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:13:12] ::1:55954 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:13:12] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:13:12] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:13:12] ::1:55955 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:13:12] ::1:55955 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:14:57] ::1:55974 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:14:57] ::1:55974 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:14:57] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:14:57] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:14:57] ::1:55975 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:14:57] ::1:55975 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:15:21] ::1:55992 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:15:21] ::1:55992 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:15:21] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:15:21] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:15:21] ::1:55993 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:15:21] ::1:55993 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:15:37] ::1:56009 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:15:37] ::1:56009 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [07-06-2026 14:15:37] Collection documents already exists, returning existing collection.
+[31mERROR[0m:    [07-06-2026 14:15:37] Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:15:37] ::1:56010 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [07-06-2026 14:15:37] ::1:56010 - "POST /api/v1/collections/5f7690b5-a4f4-48c6-9fa5-f36e9798f3a6/query HTTP/1.1" 200
+[33mWARNING[0m:  [07-06-2026 14:17:27] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048575. chroma_server_nofile will not be set.
+[32mINFO[0m:     [07-06-2026 14:17:27] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Starting component System
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Starting component SqliteDB
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Starting component Posthog
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Starting component SegmentAPI
+[31mERROR[0m:    [07-06-2026 14:17:27] Failed to send telemetry event ServerStartEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [07-06-2026 14:17:27] Started server process [[36m20669[0m]
+[32mINFO[0m:     [07-06-2026 14:17:27] Waiting for application startup.
+[32mINFO[0m:     [07-06-2026 14:17:27] Application startup complete.
+[31mERROR[0m:    [07-06-2026 14:17:27] [Errno 48] error while attempting to bind on address ('::1', 8000, 0, 0): address already in use
+[32mINFO[0m:     [07-06-2026 14:17:27] Waiting for application shutdown.
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Stopping component System
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Stopping component SegmentAPI
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Stopping component Posthog
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Stopping component SqliteDB
+[36mDEBUG[0m:    [07-06-2026 14:17:27] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [07-06-2026 14:17:27] Application shutdown complete.
+[31mERROR[0m:    [07-06-2026 14:17:55] disk I/O error
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 75, in catch_exceptions_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response_sent.set()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 89, in check_http_version_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 133, in async_wrapper
+    return await f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 476, in get_tenant
+    await to_thread.run_sync(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 146, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/api/segment.py", line 144, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/mixins/sysdb.py", line 123, in get_tenant
+    with self.tx() as cur:
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite.py", line 37, in __enter__
+    self._conn.execute("PRAGMA case_sensitive_like = ON")
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite_pool.py", line 27, in execute
+    return self._conn.execute(sql)
+sqlite3.OperationalError: disk I/O error
+[32mINFO[0m:     [07-06-2026 14:17:55] ::1:56109 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 500
+[31mERROR[0m:    [07-06-2026 14:19:39] disk I/O error
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 75, in catch_exceptions_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response_sent.set()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 89, in check_http_version_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 133, in async_wrapper
+    return await f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 476, in get_tenant
+    await to_thread.run_sync(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 146, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/api/segment.py", line 144, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/mixins/sysdb.py", line 123, in get_tenant
+    with self.tx() as cur:
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite.py", line 37, in __enter__
+    self._conn.execute("PRAGMA case_sensitive_like = ON")
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite_pool.py", line 27, in execute
+    return self._conn.execute(sql)
+sqlite3.OperationalError: disk I/O error
+[32mINFO[0m:     [07-06-2026 14:19:39] ::1:56119 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 500
+[31mERROR[0m:    [07-06-2026 14:23:51] disk I/O error
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 75, in catch_exceptions_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response_sent.set()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 89, in check_http_version_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 133, in async_wrapper
+    return await f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 476, in get_tenant
+    await to_thread.run_sync(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 146, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/api/segment.py", line 144, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/mixins/sysdb.py", line 123, in get_tenant
+    with self.tx() as cur:
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite.py", line 37, in __enter__
+    self._conn.execute("PRAGMA case_sensitive_like = ON")
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite_pool.py", line 27, in execute
+    return self._conn.execute(sql)
+sqlite3.OperationalError: disk I/O error
+[32mINFO[0m:     [07-06-2026 14:23:51] ::1:56223 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 500
+[31mERROR[0m:    [07-06-2026 14:24:05] disk I/O error
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 75, in catch_exceptions_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response_sent.set()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 89, in check_http_version_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 133, in async_wrapper
+    return await f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 476, in get_tenant
+    await to_thread.run_sync(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 146, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/api/segment.py", line 144, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/mixins/sysdb.py", line 123, in get_tenant
+    with self.tx() as cur:
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite.py", line 37, in __enter__
+    self._conn.execute("PRAGMA case_sensitive_like = ON")
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite_pool.py", line 27, in execute
+    return self._conn.execute(sql)
+sqlite3.OperationalError: disk I/O error
+[32mINFO[0m:     [07-06-2026 14:24:05] ::1:56232 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 500
+[31mERROR[0m:    [07-06-2026 14:24:28] disk I/O error
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 75, in catch_exceptions_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response_sent.set()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 89, in check_http_version_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 133, in async_wrapper
+    return await f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 476, in get_tenant
+    await to_thread.run_sync(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 146, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/api/segment.py", line 144, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/mixins/sysdb.py", line 123, in get_tenant
+    with self.tx() as cur:
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite.py", line 37, in __enter__
+    self._conn.execute("PRAGMA case_sensitive_like = ON")
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite_pool.py", line 27, in execute
+    return self._conn.execute(sql)
+sqlite3.OperationalError: disk I/O error
+[32mINFO[0m:     [07-06-2026 14:24:28] ::1:56241 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 500
+[31mERROR[0m:    [07-06-2026 14:41:16] disk I/O error
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 75, in catch_exceptions_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response_sent.set()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 89, in check_http_version_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 133, in async_wrapper
+    return await f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 476, in get_tenant
+    await to_thread.run_sync(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 146, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/api/segment.py", line 144, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/mixins/sysdb.py", line 123, in get_tenant
+    with self.tx() as cur:
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite.py", line 37, in __enter__
+    self._conn.execute("PRAGMA case_sensitive_like = ON")
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite_pool.py", line 27, in execute
+    return self._conn.execute(sql)
+sqlite3.OperationalError: disk I/O error
+[32mINFO[0m:     [07-06-2026 14:41:16] ::1:56291 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 500
+[31mERROR[0m:    [07-06-2026 14:41:35] disk I/O error
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 159, in call_next
+    message = await recv_stream.receive()
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/streams/memory.py", line 132, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 75, in catch_exceptions_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 193, in __call__
+    response_sent.set()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 89, in check_http_version_middleware
+    return await call_next(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 165, in call_next
+    raise app_exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 133, in async_wrapper
+    return await f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/server/fastapi/__init__.py", line 476, in get_tenant
+    await to_thread.run_sync(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/anyio/_backends/_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 146, in wrapper
+    return f(*args, **kwargs)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/api/segment.py", line 144, in get_tenant
+    return self._sysdb.get_tenant(name=name)
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/mixins/sysdb.py", line 123, in get_tenant
+    with self.tx() as cur:
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite.py", line 37, in __enter__
+    self._conn.execute("PRAGMA case_sensitive_like = ON")
+  File "/Users/chandrakanthota/Desktop/RAQ-QA-SYSTEM/venv/lib/python3.9/site-packages/chromadb/db/impl/sqlite_pool.py", line 27, in execute
+    return self._conn.execute(sql)
+sqlite3.OperationalError: disk I/O error
+[32mINFO[0m:     [07-06-2026 14:41:35] ::1:56304 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 500
