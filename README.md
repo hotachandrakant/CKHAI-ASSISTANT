@@ -1,297 +1,203 @@
-# RAG Document Q&A System
+<!-- ====================== ANIMATED HEADER ====================== -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:06B6D4,100:3B82F6&height=200&section=header&text=CKHAI-ASSISTANT&fontSize=55&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Production-Grade%20RAG%20Document%20Q%26A%20System&descAlignY=58&descSize=18" width="100%"/>
+<!-- Typing animation -->
+<a href="https://github.com/hotachandrakant/CKHAI-ASSISTANT">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7C3AED&center=true&vCenter=true&width=600&lines=Chat+with+your+documents+%F0%9F%93%84;Powered+by+LangChain+%2B+ChromaDB+%F0%9F%A6%9C;Runs+100%25+local+with+Ollama+%F0%9F%92%BB;Cloud-ready+with+Groq+%E2%9A%A1" alt="Typing SVG" />
+</a>
+<br/>
+<!-- Badges -->
+<p>
+  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+  <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=for-the-badge&logo=databricks&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logo=groq&logoColor=white"/>
+</p>
+<p>
+  <img src="https://img.shields.io/github/stars/hotachandrakant/CKHAI-ASSISTANT?style=social"/>
+  <img src="https://img.shields.io/github/forks/hotachandrakant/CKHAI-ASSISTANT?style=social"/>
+  <img src="https://img.shields.io/github/last-commit/hotachandrakant/CKHAI-ASSISTANT?color=7C3AED&style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square"/>
+</p>
+</div>
 
-A **production-grade Retrieval-Augmented Generation (RAG) API** built for your ML developer portfolio.
+🧠 Overview
 
-Upload PDFs, DOCX, or TXT files — then ask natural language questions. Answers are grounded strictly in your documents, with source citations returned alongside every answer.
+CKHAI-ASSISTANT is a production-grade Retrieval-Augmented Generation (RAG) system that lets you chat with your own documents. Upload PDFs, ask questions in plain English, and get accurate, context-grounded answers — with the underlying LLM running fully offline via Ollama or in the cloud via Groq for blazing-fast inference.
 
----
 
-## Tech stack
+Built for privacy, speed, and real deployment — not just a notebook demo.
 
-| Layer | Technology |
-|---|---|
-| API | FastAPI + Uvicorn (async) |
-| RAG pipeline | LangChain |
-| Vector store | ChromaDB (persistent Docker volume) |
-| LLM | OpenAI GPT-4o |
-| Embeddings | text-embedding-3-small |
-| Auth | API key via `X-API-Key` header |
-| Container | Docker + Docker Compose |
-| Tests | pytest + httpx |
-| Logging | structlog (structured JSON) |
 
----
 
-## Project structure
+<div align="center">
+  📄 Documents  ──▶  ✂️ Chunking  ──▶  🔢 Embeddings  ──▶  🗄️ Vector Store
+                                                                  │
+  💬 Answer  ◀──  🤖 LLM  ◀──  🔍 Semantic Retrieval  ◀──────────┘
 
-```
-rag-qa-system/
-├── app/
-│   ├── main.py              # FastAPI app, middleware, global error handler
-│   ├── config.py            # All settings loaded from env vars
-│   ├── routers/
-│   │   ├── upload.py        # POST /api/v1/upload
-│   │   └── query.py         # POST /api/v1/query
-│   ├── services/
-│   │   ├── ingestion.py     # Document load → chunk → embed → store pipeline
-│   │   └── retrieval.py     # Vector search + LLM answer generation (RAG chain)
-│   ├── core/
-│   │   └── auth.py          # API key authentication middleware
-│   └── models/
-│       └── schemas.py       # Pydantic request/response models
-├── tests/
-│   ├── conftest.py          # Test env setup (dummy API keys)
-│   ├── test_upload.py
-│   └── test_query.py
-├── docker/
-│   ├── Dockerfile
-│   └── docker-compose.yml
-├── pytest.ini
-├── .env.example
-├── .gitignore
-└── requirements.txt
-```
+</div>
 
----
+🏗️ Architecture
 
-## Setup — step by step
+#mermaid-r3kk-r1 { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; fill: rgb(25, 25, 25); }
+#mermaid-r3kk-r1 .edge-animation-slow { stroke-dashoffset: 900; animation: 50s linear 0s infinite normal none running dash; stroke-linecap: round; stroke-dasharray: 9, 5 !important; }
+#mermaid-r3kk-r1 .edge-animation-fast { stroke-dashoffset: 900; animation: 20s linear 0s infinite normal none running dash; stroke-linecap: round; stroke-dasharray: 9, 5 !important; }
+#mermaid-r3kk-r1 .error-icon { fill: rgb(204, 120, 92); }
+#mermaid-r3kk-r1 .error-text { fill: rgb(51, 135, 163); stroke: rgb(51, 135, 163); }
+#mermaid-r3kk-r1 .edge-thickness-normal { stroke-width: 1px; }
+#mermaid-r3kk-r1 .edge-thickness-thick { stroke-width: 3.5px; }
+#mermaid-r3kk-r1 .edge-pattern-solid { stroke-dasharray: 0; }
+#mermaid-r3kk-r1 .edge-thickness-invisible { stroke-width: 0; fill: none; }
+#mermaid-r3kk-r1 .edge-pattern-dashed { stroke-dasharray: 3; }
+#mermaid-r3kk-r1 .edge-pattern-dotted { stroke-dasharray: 2; }
+#mermaid-r3kk-r1 .marker { fill: rgb(145, 145, 141); stroke: rgb(145, 145, 141); }
+#mermaid-r3kk-r1 .marker.cross { stroke: rgb(145, 145, 141); }
+#mermaid-r3kk-r1 svg { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 16px; }
+#mermaid-r3kk-r1 p { margin: 0px; }
+#mermaid-r3kk-r1 .label { font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: rgb(25, 25, 25); }
+#mermaid-r3kk-r1 .cluster-label text { fill: rgb(51, 135, 163); }
+#mermaid-r3kk-r1 .cluster-label span { color: rgb(51, 135, 163); }
+#mermaid-r3kk-r1 .cluster-label span p { background-color: transparent; }
+#mermaid-r3kk-r1 .label text, #mermaid-r3kk-r1 span { fill: rgb(25, 25, 25); color: rgb(25, 25, 25); }
+#mermaid-r3kk-r1 .node rect, #mermaid-r3kk-r1 .node circle, #mermaid-r3kk-r1 .node ellipse, #mermaid-r3kk-r1 .node polygon, #mermaid-r3kk-r1 .node path { fill: rgb(240, 240, 235); stroke: rgb(217, 216, 213); stroke-width: 1px; }
+#mermaid-r3kk-r1 .rough-node .label text, #mermaid-r3kk-r1 .node .label text, #mermaid-r3kk-r1 .image-shape .label, #mermaid-r3kk-r1 .icon-shape .label { text-anchor: middle; }
+#mermaid-r3kk-r1 .node .katex path { fill: rgb(0, 0, 0); stroke: rgb(0, 0, 0); stroke-width: 1px; }
+#mermaid-r3kk-r1 .rough-node .label, #mermaid-r3kk-r1 .node .label, #mermaid-r3kk-r1 .image-shape .label, #mermaid-r3kk-r1 .icon-shape .label { text-align: center; }
+#mermaid-r3kk-r1 .node.clickable { cursor: pointer; }
+#mermaid-r3kk-r1 .root .anchor path { stroke-width: 0; stroke: rgb(145, 145, 141); fill: rgb(145, 145, 141) !important; }
+#mermaid-r3kk-r1 .arrowheadPath { fill: rgb(11, 11, 11); }
+#mermaid-r3kk-r1 .edgePath .path { stroke: rgb(145, 145, 141); stroke-width: 1px; }
+#mermaid-r3kk-r1 .flowchart-link { stroke: rgb(145, 145, 141); fill: none; }
+#mermaid-r3kk-r1 .edgeLabel { background-color: rgb(245, 230, 216); text-align: center; }
+#mermaid-r3kk-r1 .edgeLabel p { background-color: rgb(245, 230, 216); }
+#mermaid-r3kk-r1 .edgeLabel rect { opacity: 0.5; background-color: rgb(245, 230, 216); fill: rgb(245, 230, 216); }
+#mermaid-r3kk-r1 .labelBkg { background-color: rgba(245, 230, 216, 0.5); }
+#mermaid-r3kk-r1 .cluster rect { fill: rgb(204, 120, 92); stroke: rgb(138, 115, 107); stroke-width: 1px; }
+#mermaid-r3kk-r1 .cluster text { fill: rgb(51, 135, 163); }
+#mermaid-r3kk-r1 .cluster span { color: rgb(51, 135, 163); }
+#mermaid-r3kk-r1 div.mermaidTooltip { position: absolute; text-align: center; max-width: 200px; padding: 2px; font-family: "Anthropic Sans", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; background: rgb(204, 120, 92); border: 1px solid rgb(138, 115, 107); border-radius: 2px; pointer-events: none; z-index: 100; }
+#mermaid-r3kk-r1 .flowchartTitleText { text-anchor: middle; font-size: 18px; fill: rgb(25, 25, 25); }
+#mermaid-r3kk-r1 rect.text { fill: none; stroke-width: 0; }
+#mermaid-r3kk-r1 .icon-shape, #mermaid-r3kk-r1 .image-shape { background-color: rgb(245, 230, 216); text-align: center; }
+#mermaid-r3kk-r1 .icon-shape p, #mermaid-r3kk-r1 .image-shape p { background-color: rgb(245, 230, 216); padding: 2px; }
+#mermaid-r3kk-r1 .icon-shape .label rect, #mermaid-r3kk-r1 .image-shape .label rect { opacity: 0.5; background-color: rgb(245, 230, 216); fill: rgb(245, 230, 216); }
+#mermaid-r3kk-r1 .label-icon { display: inline-block; height: 1em; overflow: visible; vertical-align: -0.125em; }
+#mermaid-r3kk-r1 .node .label-icon path { fill: currentcolor; stroke: revert; stroke-width: revert; }
+#mermaid-r3kk-r1 .node .neo-node { stroke: rgb(217, 216, 213); }
+#mermaid-r3kk-r1 [data-look="neo"].node rect, #mermaid-r3kk-r1 [data-look="neo"].cluster rect, #mermaid-r3kk-r1 [data-look="neo"].node polygon { stroke: url("#mermaid-r3kk-r1-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r3kk-r1 [data-look="neo"].node path { stroke: url("#mermaid-r3kk-r1-gradient"); stroke-width: 1px; }
+#mermaid-r3kk-r1 [data-look="neo"].node .outer-path { filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r3kk-r1 [data-look="neo"].node .neo-line path { stroke: rgb(217, 216, 213); filter: none; }
+#mermaid-r3kk-r1 [data-look="neo"].node circle { stroke: url("#mermaid-r3kk-r1-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r3kk-r1 [data-look="neo"].node circle .state-start { fill: rgb(0, 0, 0); }
+#mermaid-r3kk-r1 [data-look="neo"].icon-shape .icon { fill: url("#mermaid-r3kk-r1-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r3kk-r1 [data-look="neo"].icon-shape .icon-neo path { stroke: url("#mermaid-r3kk-r1-gradient"); filter: drop-shadow(rgb(185, 185, 185) 1px 2px 2px); }
+#mermaid-r3kk-r1 :root { --mermaid-font-family: "Anthropic Sans",system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }LocalCloud📄 PDF UploadDocument LoaderText Splitter / ChunkingEmbedding ModelChromaDBVector Store💬 User QueryEmbed QuerySimilarity SearchRetrieved ContextLLM Engine🦙 Ollama⚡ Groq✅ Grounded Answer
 
-### Prerequisites
-- Docker Desktop installed and running
-- Python 3.11+ (for local dev only)
-- An OpenAI API key from https://platform.openai.com
 
-### Step 1 — Clone and configure
+✨ Features
 
-```bash
-git clone https://github.com/YOUR_USERNAME/rag-qa-system
-cd rag-qa-system
-cp .env.example .env
-```
+FeatureDescription🔒Local-First PrivacyRun the entire pipeline offline with Ollama — your documents never leave your machine⚡Cloud AccelerationSwitch to Groq for ultra-low-latency inference when you need speed🦜LangChain OrchestrationRobust RAG pipeline for loading, chunking, embedding, and retrieval🗄️Vector SearchChromaDB for fast, persistent semantic similarity search🚀FastAPI BackendClean, async REST API ready for production deployment📄Document Q&AUpload PDFs and ask natural-language questions with grounded answers🔄Pluggable LLMsSwap between local and cloud models with a config change
 
-Now open `.env` and fill in **two required values**:
 
-```env
-OPENAI_API_KEY=sk-your-real-openai-key
-API_KEY=pick-any-secret-string-you-want
-```
+🛠️ Tech Stack
 
-Generate a strong `API_KEY` with:
-```bash
-openssl rand -hex 32
-```
+<div align="center">
+LayerTechnologyAPIFastAPI · UvicornRAG FrameworkLangChainVector DBChromaDBLLM (Local)OllamaLLM (Cloud)GroqLanguagePython 3.10+
 
-### Step 2 — Run with Docker
+</div>
 
-```bash
-cd docker
-docker-compose up --build
-```
+🚀 Getting Started
 
-This starts two containers:
-- `api` — your FastAPI app on `http://localhost:8080`
-- `chromadb` — the vector database on `http://localhost:8001`
+📋 Prerequisites
 
-Vectors are stored in a Docker volume (`chroma_data`) — they persist across restarts.
 
-### Step 3 — Verify it's running
+Python 3.10+
+Ollama installed and running (for local mode)
+A Groq API key (optional, for cloud mode)
 
-```bash
-curl http://localhost:8080/health
-```
 
-Expected response:
-```json
-{"status": "healthy", "version": "1.0.0", "environment": "production"}
-```
+⚙️ Installation
 
-Also open the Swagger UI: http://localhost:8080/docs
+bash# 1. Clone the repository
+git clone https://github.com/hotachandrakant/CKHAI-ASSISTANT.git
+cd CKHAI-ASSISTANT
 
----
-
-## Usage
-
-### Upload a document
-
-```bash
-curl -X POST http://localhost:8080/api/v1/upload \
-  -H "X-API-Key: your-api-key" \
-  -F "file=@path/to/your/document.pdf"
-```
-
-Response:
-```json
-{
-  "message": "Document ingested successfully",
-  "filename": "document.pdf",
-  "chunks_created": 38,
-  "collection": "documents"
-}
-```
-
-Supported formats: `.pdf`, `.docx`, `.txt` (max 50 MB each)
-
-### Ask a question
-
-```bash
-curl -X POST http://localhost:8080/api/v1/query \
-  -H "X-API-Key: your-api-key" \
-  -H "Content-Type: application/json" \
-  -d '{"question": "What are the key findings?"}'
-```
-
-Response:
-```json
-{
-  "answer": "The key findings include three main areas...",
-  "sources": [
-    {
-      "page_content": "The study found that...",
-      "source": "document.pdf",
-      "page": 4
-    }
-  ],
-  "question": "What are the key findings?",
-  "model": "gpt-4o",
-  "timestamp": "2024-01-15T10:30:00"
-}
-```
-
-### Optional query parameters
-
-```json
-{
-  "question": "Summarise the methodology",
-  "collection": "documents",
-  "top_k": 8
-}
-```
-
-- `collection` — query a specific ChromaDB collection (default: `documents`)
-- `top_k` — number of chunks to retrieve (1–20, default: 5)
-
----
-
-## API reference
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| GET | `/health` | No | Health check |
-| GET | `/docs` | No | Swagger UI |
-| GET | `/redoc` | No | ReDoc docs |
-| POST | `/api/v1/upload` | Yes | Upload + ingest a document |
-| POST | `/api/v1/query` | Yes | Ask a question |
-
-All protected endpoints require the `X-API-Key` header.
-
----
-
-## Local development (without Docker)
-
-```bash
-# 1. Create and activate virtual environment
+# 2. Create & activate a virtual environment
 python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+source venv/bin/activate        # On Windows: venv\Scripts\activate
 
-# 2. Install dependencies
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# 3. Run ChromaDB separately (still needs Docker for this)
-docker run -p 8001:8000 chromadb/chroma:latest
+# 4. Configure environment variables
+cp .env.example .env            # then add your GROQ_API_KEY if using cloud mode
 
-# 4. Set env vars for local run
-export OPENAI_API_KEY=sk-your-key
-export API_KEY=dev-secret
-export CHROMA_HOST=localhost
-export CHROMA_PORT=8001
+▶️ Running the App
 
-# 5. Start the API with hot reload
-uvicorn app.main:app --reload --port 8080
-```
+The system runs three concurrent processes. Open three terminals (or use a process manager):
 
----
+bash# Terminal 1 — start ChromaDB
+chroma run --port 8000
 
-## Run tests
+# Terminal 2 — start Ollama (local LLM)
+ollama serve
 
-```bash
-# Activate venv first
-source venv/bin/activate
+# Terminal 3 — launch the FastAPI server
+uvicorn app:app --host 0.0.0.0 --port 8080 --reload
 
-pip install -r requirements.txt
-pytest tests/ -v
-```
+Then open http://localhost:8080/docs to explore the interactive API.
 
-Tests don't hit OpenAI or ChromaDB — they test auth, validation, and routing only.
 
----
+📡 API Endpoints
 
-## Environment variables
+MethodEndpointDescriptionPOST/uploadUpload a PDF document for indexingPOST/askAsk a question against the indexed documentsGET/healthService health check
 
-| Variable | Default | Required | Description |
-|---|---|---|---|
-| `OPENAI_API_KEY` | — | Yes | OpenAI API key |
-| `API_KEY` | — | Yes | Your chosen API key for auth |
-| `CHROMA_HOST` | `chromadb` | No | ChromaDB hostname |
-| `CHROMA_PORT` | `8000` | No | ChromaDB port |
-| `CHROMA_COLLECTION` | `documents` | No | Default collection name |
-| `CHUNK_SIZE` | `1000` | No | Characters per chunk |
-| `CHUNK_OVERLAP` | `200` | No | Overlap between chunks |
-| `EMBEDDING_MODEL` | `text-embedding-3-small` | No | OpenAI embedding model |
-| `LLM_MODEL` | `gpt-4o` | No | OpenAI chat model |
-| `MAX_RETRIEVED_DOCS` | `5` | No | Chunks retrieved per query |
-| `APP_ENV` | `development` | No | Environment label |
-| `LOG_LEVEL` | `INFO` | No | Log verbosity |
 
----
+💡 Adjust the table above to match your actual route names.
 
-## How the RAG pipeline works
 
-```
-User uploads PDF
-       |
-       v
-  PyPDFLoader loads pages
-       |
-       v
-  RecursiveCharacterTextSplitter
-  chunks text (1000 chars, 200 overlap)
-       |
-       v
-  OpenAI text-embedding-3-small
-  converts each chunk to a vector
-       |
-       v
-  ChromaDB stores vectors + metadata
-       |
-  User asks question
-       |
-       v
-  Question is embedded (same model)
-       |
-       v
-  MMR search finds top-k similar chunks
-       |
-       v
-  GPT-4o generates answer from context
-       |
-       v
-  Answer + source citations returned
-```
 
----
 
-## Deploy to production (Vercel / Railway / Render)
+🗺️ Roadmap
 
-For cloud deployment, set these environment variables in your cloud provider's dashboard instead of `.env`:
 
-- `OPENAI_API_KEY`
-- `API_KEY`
-- `CHROMA_HOST` (point to a hosted ChromaDB or use Pinecone instead)
+ Local RAG pipeline with Ollama
+ Cloud inference with Groq
+ FastAPI + ChromaDB integration
+ Streaming responses
+ Multi-document collections & namespaces
+ Web UI front-end
+ Docker Compose one-command deploy
 
-For Vercel specifically, use `vercel.json` to route requests to your Docker container. Railway and Render support Docker Compose directly.
 
----
 
-## Built by Chandrakant Hota
-- GitHub: github.com/hotachandrakant
-- LinkedIn: linkedin.com/in/chandrakant-hota-6757a939b
+🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a PR.
+
+
+👤 Author
+
+<div align="center">
+Chandrakant Hota
+
+Show Image
+Show Image
+
+Data Science & Full Stack Engineering
+
+</div>
+
+📝 License
+
+This project is licensed under the MIT License — see the LICENSE file for details.
+
+<!-- ====================== ANIMATED FOOTER ====================== -->
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:3B82F6,50:06B6D4,100:7C3AED&height=120&section=footer"/>
+⭐ If you find this project useful, consider giving it a star! ⭐
+
+</div>
